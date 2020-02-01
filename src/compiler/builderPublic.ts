@@ -53,6 +53,10 @@ namespace ts {
          * Get a list of files in the program
          */
         getSourceFiles(): readonly SourceFile[];
+        /*@internal*/
+        getSourceFileByPath(path: Path): SourceFile | undefined;
+        /*@internal*/
+        getFileIncludeReasons(): MultiMap<FileIncludeReason>;
         /**
          * Get the diagnostics for compiler options
          */
